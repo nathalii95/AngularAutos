@@ -1,0 +1,54 @@
+<div class="mt-3  card">
+  <div class="card-header">
+    <i class="fa-solid fa-car-rear"></i>&nbsp;&nbsp;<span class="fw-bold">Vehiculo {{vehiculo?.marca}} {{vehiculo?.modelo}}</span>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="{{vehiculo?.foto}}" class="img-thumbnail">
+      </div>
+      <div class="col-md-7">
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Codigo:</label>
+          <div class="col-sm-9">
+            {{vehiculo?.codigo}}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Marca:</label>
+          <div class="col-sm-9">
+            {{vehiculo?.marca}}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Modelo:</label>
+          <div class="col-sm-9">
+            {{vehiculo?.modelo }}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Año:</label>
+          <div class="col-sm-9">
+            {{vehiculo?.anio}}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Precio:</label>
+          <div class="col-sm-9">
+            {{vehiculo?.precio| currency}}
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Calificacion:</label>
+          <div class="col-sm-9">
+            {{ convertirAestrellas(vehiculo?.calificacion ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-warning" type="button" (click)="redirigir()"> <i class="fa-solid fa-arrow-left"></i>&nbsp; Regresar</button>
+  </div>
+</div>
